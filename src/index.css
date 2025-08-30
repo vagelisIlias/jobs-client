@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-default: 'Roboto', sans-serif;
+  --color-primary: #3b82f6;
+  --color-secondary: #64748b;
+}
+
+@layer utilities {
+  .grid-cols-70-30 {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+/* Custom styles */
+body {
+  font-family: var(--font-default);
+}
