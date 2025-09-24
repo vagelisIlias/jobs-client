@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Hero({title='Become a React Dev', subtitle='Find the React job that fits your skills and needs'}) {
+function Hero({title='Become that you Dreamed', subtitle='Find the Dream job that fits your skills and needs'}) {
   return (
     <>
         <section className="bg-linear-to-r from-blue-500 via-cyan-500 to-teal-500 py-20 mb-4">
