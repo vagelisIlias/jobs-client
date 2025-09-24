@@ -20,7 +20,7 @@ function Navbar() {
                     alt="React Jobs"
                   />
                   <span className="hidden md:block text-white text-2xl font-bold ml-2">
-                    React Jobs
+                    Get Hired
                   </span>
                 </a>
                 
@@ -38,11 +38,24 @@ function Navbar() {
                     >
                       Jobs
                     </a>
+                    {/* That needs to comes up in case a user is logged-in */}
                     <a
                       href="/add-job.html"
                       className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                     >
                       Add Job
+                    </a>
+                    <a
+                      href="/add-job.html"
+                      className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                    >
+                      Login
+                    </a>
+                    <a
+                      href="/add-job.html"
+                      className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                    >
+                      Register
                     </a>
                   </div>
                 </div>
