@@ -4,11 +4,13 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
-
+    
+    // Set module to "esnext" for compatibility with modern bundlers (Vite, Webpack)
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "esnext",
     "target": "esnext",
+    // Don't include unnecessary type packages unless needed
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -16,13 +18,23 @@
     // and npm install -D @types/node
 
     // Other Outputs
+    // Generate source maps for debugging
     "sourceMap": true,
+    // Generate declaration files (.d.ts)
     "declaration": true,
     "declarationMap": true,
 
     // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
+    // Enforce exact optional property types and unchecked index access for better type safety
     "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Keep consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+
+    // Allow default imports from modules without default exports
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -32,13 +44,26 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 
+    // Use Node-style module resolution
+    "moduleResolution": "node",
+
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
+    // Isolate modules for faster compilation and compatibility with tooling
     "isolatedModules": true,
+    // Avoid errors on unused imports on side effects imports (optional, but good)
     "noUncheckedSideEffectImports": true,
+    // Force module detection (helps with some IDEs)
     "moduleDetection": "force",
+    // Skip type checking for declaration files in node_modules
     "skipLibCheck": true,
-  }
+  },
+
+  // Include your source folder
+  "include": ["src"],
+
+  // Optional: exclude node_modules and build folders from type checking
+  "exclude": ["node_modules", "build"]
 }
